@@ -3,12 +3,11 @@ import java.util.*;
 /*
 * computes your final course grade, based on a weighted-average 
 formula, i.e., an average in which each term is multiplied by a significance factor.
-* Zeyang Yu & Chenyu Li
+* Zeyang Yu 
 */
 public class Prog4 {
     /*
      * Set all the percentage of the score maches with the grade's letters you need to reach.
-     * Chenyu Li 
      */
     public static final double A_PCT = 0.91; 
     public static final double A_MINUS_PCT = 0.89; 
@@ -58,7 +57,6 @@ public class Prog4 {
     /*
      * The equation for how to calculate the maximum score, minimum score, raw average, 
      * adjust average, and standard deviation.
-     * Zeyang Yu
      */
     public static double processType(Scanner in, 
                                      String inType, 
@@ -95,7 +93,6 @@ public class Prog4 {
     
     /*
      * Find the minimum score for each section.(Quiz, Lab, Program, and Exam)
-     * Chenyu Li
      */
     public static double findMin(double[] inArray){
         double Min = inArray[0];
@@ -109,7 +106,6 @@ public class Prog4 {
     
    /*
     * Find the maximum score for each section.(Quiz, Lab, Program,and Exam)
-    * Chenyu Li
     */
     public static double findMax(double[] inArray){
         double Max = inArray[0];
@@ -123,7 +119,6 @@ public class Prog4 {
     
     /*
      * Calculate the raw average for each part of the section.(Quiz, Lab, Program, and Exam)
-     * Zeyang Yu
      */
     public static double rawAverage(double[] inArray,double scoresMax){
         double total = 0,num,
@@ -138,7 +133,6 @@ public class Prog4 {
     
     /*
      * Calculate the adjust average for each part of the section.(Quiz and Lab)
-     * Zeyang Yu
      */
     public static double adjustAverage(double[] inArray,double scoresMax){
         double total = 0,
@@ -154,7 +148,6 @@ public class Prog4 {
     /*
      * Calculate the standard Deviation for each part of the 
      * section.(Quiz, Lab, Program, and Exam)
-     * Zeyang Yu
      */
     public static double standardDeviation(double[] inArray,double scoresMax){
         double average,totalaverage = 0;
@@ -174,7 +167,6 @@ public class Prog4 {
     /*
      * Ask users to enter how many times did they were scroed 
      * by for each section.(Quiz, Lab, Program, and Exam)
-     * Chenyu Li
      */
     public static void printAskNum(String type){
         System.out.println();
@@ -184,7 +176,6 @@ public class Prog4 {
     /* 
      * Ask users to enter the scores they get 
      * every time for each section.(Quiz, Lab, Program, and Exam)
-     * Chenyu Li
      */
     public static void printEnter(String type){
         System.out.print("Enter " + type +" scores: ");
@@ -194,7 +185,6 @@ public class Prog4 {
      * Output the results of how many times the users had been scored, minimum score, maximum
      * score, raw average, adjusted average, and standard deviation for two section.(Quiz and
      * Lab)
-     * Zeyang Yu
      */
     public static void printTrue(int num, double Min, double Max, 
                                  double Average, double Adjust,
@@ -212,7 +202,6 @@ public class Prog4 {
     /*
      * Output the results of how many times the users had been scored, minimum score, maximum
      * score, raw average, and standard deviation for the other two section.(Program and Exam)
-     * Chenyu Li
      */
     public static void printFalse(int num, double Min, double Max, 
                                   double Average,double StanD,String type){
@@ -227,7 +216,6 @@ public class Prog4 {
     
     /*
      * Output the resuts for the final grade.
-     * Chenyu Li
      */
     public static void printFinalSummary(double finalPct) {
         System.out.println();
@@ -242,7 +230,6 @@ public class Prog4 {
     
     /*
      * Determine which letter grade the user get based on the percentage of the final grade.
-     * Zeyang Yu
      */
     public static String judgeGrade(double grade){
         String letter = "";
